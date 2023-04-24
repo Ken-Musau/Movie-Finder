@@ -26,11 +26,54 @@
         </div>
       </div>
 
-      <!-- search bar -->
+      <!-- search box container -->
       <div class="search-container">
+        <!-- search box -->
         <div class="search-element">
           <h3>Search Movie:</h3>
-          <input type="text">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Movie ..."
+            id="movie-search-box"
+          />
+        </div>
+
+        <!-- search list -->
+        <div class="search-list" id="search-list">
+          <div class="search-list-item">
+            <div class="search-item-thumbnail">
+              <img src="./assets/spiderman.jpg" alt="" />
+            </div>
+            <div class="search-item-info">
+              <h3>Spider-Man: No Way Home</h3>
+              <p>2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="result-container">
+          <div class="result-grid" id="result-grid">
+            <div class="movie-poster">
+              <img src="./assets/spiderman.jpg" alt="movie poster" />
+            </div>
+            <div class="movie-info">
+              <h3 class="movie-title">Spider-Man: No Way Home</h3>
+              <ul class="movie-misc-info">
+                <li class="year">Year: 2021</li>
+                <li class="rated">Ratings: PG-13</li>
+                <li class="released">Released: 17th December 2021</li>
+              </ul>
+              <p class="genre"><b>Genre: </b> Action, Adventure, Comedy</p>
+              <p class="writer"><b>Writers:</b> Chris McKenna, Erik Sommers, Stan Lee</p>
+              <p class="actors"><b>Actors: </b> Tom Holland, Zendaya Benedict, Cumber batch </b></p>
+              <p class="plot"><b>Plot:</b> With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.</p>
+              <p class="language"><b>Language:</b> English</p>
+              <p class="awards"><b><i class="fas fa-award"></i></b> Nomited for 1 Oscar</p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
