@@ -12,6 +12,7 @@
 }
 body {
   font-family: "Oswald", sans-serif;
+  background-color: var(--dark-color);
 }
 a {
   text-decoration: none;
@@ -19,12 +20,18 @@ a {
 
 .wrapper {
   min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: var(--dark-color);
 }
 
+.header-container {
+  display: grid;
+  border-bottom: 1px solid var(--light-dark-color);
+  grid-template-columns: 1fr 2fr;
+}
 .logo {
   padding: 1rem;
-  border-bottom: 1px solid var(--light-dark-color);
 }
 .logo p {
   font-size: 2rem;
@@ -40,19 +47,38 @@ a {
   display: flex;
   flex-direction: column;
   color: white;
-  outline: 1px solid red;
   padding: 20px;
   margin-top: 20px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.search-result-container{
+.search-box {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.2em;
+  /* outline: 1px solid red; */
+  min-width: 70%;
+  margin: 20px;
+  padding: 20px 10px;
+  max-width: 100%;
+}
+.search-box-container input,
+.search-box-container button {
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+}
+
+.search-box-container input {
+ 
+} 
+
+.search-result-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.movie-info{
+.movie-info {
   max-width: 60%;
 }
