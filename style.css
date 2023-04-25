@@ -71,26 +71,90 @@ a {
 }
 
 .search-box-container input {
- /* background-color: transparent; */
- border: 1px solid #0a0a0a;
- padding: 0.7em;
- color: #fff;
-} 
-search-box-container input:focus{
+  /* background-color: transparent; */
+  border: 1px solid #0a0a0a;
+  padding: 0.7em;
+  color: #fff;
+}
+search-box-container input:focus {
   border-color: #fff;
 }
 
-.search-box-container button{
+.search-box-container button {
   background-color: var(--yellow-color);
+  color: #fff;
+  font-weight: bold;
   border: none;
   cursor: pointer;
 }
+
+/* search result  */
+
 .search-result-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem 0;
 }
-
+.movie-poster img {
+  max-width: 300px;
+  margin: 0 auto;
+}
 .movie-info {
   max-width: 60%;
+  text-align: center;
+  /* padding-top: 3rem; */
+}
+
+.movie-title {
+  font-size: 2rem;
+}
+
+.movie-extra-info {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+movie-info .year {
+  font-weight: 500;
+}
+.movie-info .rated {
+  background-color: var(--yellow-color);
+  padding: 0.4rem;
+  margin: 0 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.movie-info .released {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+.movie-info .writer {
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.movie-info .genre {
+  background-color: var(--light-dark-color);
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+.movie-info .plot {
+  max-width: 400px;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+}
+.movie-info .language {
+  color: var(--yellow-color);
+  font-style: italic;
+}
+.movie-info .awards {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.movie-info .awards i {
+  color: var(--yellow-color);
+  margin: 1rem 0.7rem 0 0;
 }
