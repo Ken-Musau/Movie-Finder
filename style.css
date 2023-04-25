@@ -16,37 +16,43 @@ body {
 a {
   text-decoration: none;
 }
-img {
-  width: 100%;
-  display: block;
-}
+
 .wrapper {
   min-height: 100vh;
   background-color: var(--dark-color);
 }
-.wrapper .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
 
-.search-container{
-  background-color: var(--md-dark-color);
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.logo{
+.logo {
   padding: 1rem;
-  border-bottom: 1px solid var(--light-dark-color)
+  border-bottom: 1px solid var(--light-dark-color);
 }
-.logo p{
+.logo p {
   font-size: 2rem;
   color: #fff;
   font-weight: bold;
 }
-.logo p span{
-  color: var(--yellow-color)
+.logo p span {
+  color: var(--yellow-color);
+  font-size: 2.3rem;
 }
 
+.search-content-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  outline: 1px solid red;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-result-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-info{
+  max-width: 60%;
+}
