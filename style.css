@@ -34,6 +34,7 @@ a {
   padding: 1rem;
 }
 .logo p {
+  margin-top: 20px;
   font-size: 2rem;
   color: #fff;
   font-weight: bold;
@@ -70,9 +71,20 @@ a {
 }
 
 .search-box-container input {
- 
+ /* background-color: transparent; */
+ border: 1px solid #0a0a0a;
+ padding: 0.7em;
+ color: #fff;
 } 
+search-box-container input:focus{
+  border-color: #fff;
+}
 
+.search-box-container button{
+  background-color: var(--yellow-color);
+  border: none;
+  cursor: pointer;
+}
 .search-result-container {
   display: flex;
   justify-content: space-between;
