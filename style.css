@@ -74,7 +74,7 @@ a {
   /* background-color: transparent; */
   border: 1px solid #0a0a0a;
   padding: 0.7em;
-  color: #fff;
+  /* color: #fff; */
 }
 search-box-container input:focus {
   border-color: #fff;
