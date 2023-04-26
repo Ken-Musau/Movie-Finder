@@ -10,13 +10,16 @@ const movieYear = document.getElementById("year");
 const movieRate = document.getElementById("rated");
 const movieReleaseDate = document.getElementById("released");
 const movieGenre = document.getElementById("genre");
-const movieWrite = document.getElementById("writer");
+const movieWriter = document.getElementById("writer");
 const movieActors = document.getElementById("actors");
-const moviePlot = document.getElementById('plot');
+const moviePlot = document.getElementById("plot");
+const movieLanguage = document.getElementById("language");
+const movieAwards = document.getElementById("awards");
+
 // const movieSearchQueryName = "avatar";
 
 const fetchMovie = function (movieSearchQueryName) {
-  if (movieSearchQueryName <= 0) {
+  if (movieSearchQueryName.length === 0) {
     resultError.innerHTML =
       '<h3 class="error-msg">Please enter the correct Movie Name</h3>';
   } else {
@@ -26,6 +29,15 @@ const fetchMovie = function (movieSearchQueryName) {
         console.log(movie);
         moviePoster.src = movie.Poster;
         movieTitle.innerText = movie.Title;
+        movieYear.innerText = movie.Year;
+        movieRate.innerText = movie.Rated;
+        movieReleaseDate.innerText = movie.Released;
+        movieGenre.innerText = movie.Genre;
+        movieWriter.innerText = movie.Writer;
+        movieActors.innerText = movie.Actors;
+        moviePlot.innerText = movie.Plot;
+        movieLanguage.innerText = movie.Language;
+        movieAwards.innerText = movie.Awards;
       });
   }
 };
