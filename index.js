@@ -1,6 +1,6 @@
 "use strict";
 
-const resultContainer = document.getElementById("search-result-container");
+const resultContainer = document.getElementById("search-content-container");
 const form = document.querySelector("#search-box");
 const searchBtn = document.getElementById("search-btn");
 
@@ -64,7 +64,7 @@ form.addEventListener("submit", function (e) {
   let movieSearchQueryName = e.target.movie_search_box.value.trim();
   if (movieSearchQueryName.length === 0) {
     resultContainer.innerHTML =
-      '<h3 class="error-msg">Please enter a Movie Name</h3>';
+      '<h3 class="error-msg">Enter any Movie Title to search</h3>';
   } else {
     fetchMovie(movieSearchQueryName);
     //   form.reset();

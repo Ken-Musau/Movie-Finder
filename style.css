@@ -195,5 +195,6 @@ search-box-container input:focus {
 .error-msg {
   font-size: 50px;
   text-align: center;
-  align-self: center;
+  max-width: 900px;
+  margin: 59px auto;
 }

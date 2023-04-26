@@ -4,8 +4,9 @@ Movie Finder is a web application that allows users to search for movies by titl
 
 # Features
 
-Search for movies by title
-View movie details, including title, year, plot, and poster
+1. Search for movies by title
+2. View movie details, including title, year, plot, and poster
+
 
 # Technologies Used
 
