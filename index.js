@@ -5,6 +5,9 @@ const form = document.querySelector("#search-box");
 const searchBtn = document.getElementById("search-btn");
 const commentForm = document.getElementById("comment");
 const userReviewList = document.getElementById("user-review-list");
+const star = document.querySelectorAll(".fa-star");
+const topPickslist = document.getElementById("2023-list");
+const recentSearch = document.getElementById("recent-search");
 
 const moviePoster = document.getElementById("movie-poster");
 const movieTitle = document.getElementById("movie-title");
@@ -19,6 +22,8 @@ const movieLanguage = document.getElementById("language");
 const movieAwards = document.getElementById("awards");
 
 // const movieSearchQueryName = "avatar";
+
+const recentSearchList = [];
 
 const fetchMovie = function (movieSearchQueryName) {
   fetch(
@@ -35,6 +40,7 @@ const fetchMovie = function (movieSearchQueryName) {
     .then((movie) => {
       console.log(movie);
       displayMovie(movie);
+      recentSearchList.push(movie.Title);
     })
     .catch((error) => {
       resultContainer.innerHTML =
@@ -68,13 +74,24 @@ form.addEventListener("submit", function (e) {
   }
 });
 
-commentForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-  appendContentToParent(e.target.comments.value);
-});
-
 function appendContentToParent(submitValue) {
   const li = document.createElement("li");
   li.innerText = submitValue;
   userReviewList.appendChild(li);
 }
+
+commentForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  appendContentToParent(e.target.comments.value);
+});
+
+star.forEach((star) =>
+  star.addEventListener("click", function () {
+    star.style.color = "gold";
+  })
+);
+
+topPickslist.addEventListener("click", function (e) {
+  const movieTitle = e.target.innerText;
+  fetchMovie(movieTitle);
+});

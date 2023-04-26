@@ -118,7 +118,7 @@ search-box-container input:focus {
   /* border-bottom: 1px solid var(--light-dark-color); */
 }
 
-.star-rating{
+.star-rating {
   border-bottom: 1px solid var(--light-dark-color);
   padding-bottom: 5px;
 }
@@ -144,7 +144,6 @@ search-box-container input:focus {
 .movie-info .released {
   font-size: 1rem;
   opacity: 0.9;
-
 }
 .movie-info .writer {
   /* padding: 0.5rem; */
@@ -170,7 +169,7 @@ search-box-container input:focus {
   border-bottom: 1px solid var(--light-dark-color);
   padding-bottom: 5px;
 }
-.movie-info .actors{
+.movie-info .actors {
   border-bottom: 1px solid var(--light-dark-color);
   padding-bottom: 10px;
 }
@@ -189,45 +188,48 @@ search-box-container input:focus {
   border-bottom: 1px solid var(--light-dark-color);
   padding: 5px 0;
   font-size: 20px;
-
 }
 .movie-info .awards i {
   color: var(--yellow-color);
   margin: 1rem 0.7rem 0 0;
 }
-
-.more-to-explore h3{ 
+.more-to-explore {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.more-to-explore h3 {
   border-left: 8px solid var(--green-color);
   padding-left: 10px;
+  margin-bottom: 10px;
 }
 
-.user-review{
+.user-review {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
-.user-review h3{
+.user-review h3 {
   border-left: 8px solid var(--yellow-color);
   font-size: 30px;
   padding-left: 10px;
   margin-bottom: 10px;
 }
 
-.user-review h3 span{
+.user-review h3 span {
   color: var(--green-color);
   font-size: 35px;
 }
 
-.comment-section-container{
+.comment-section-container {
   /* background-color: #fff; */
   min-height: 200px;
   max-width: 500px;
   margin: 50px auto;
   padding: 20px;
-} 
-.comment-section-container#comments{
+}
+.comment-section-container#comments {
   padding: 5px 4px;
 }
-.comment-section-container .comment-btn{
+.comment-section-container .comment-btn {
   background-color: var(--yellow-color);
   padding: 10px 8px;
   border-radius: 2px;
