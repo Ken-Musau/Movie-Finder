@@ -158,3 +158,9 @@ movie-info .year {
   color: var(--yellow-color);
   margin: 1rem 0.7rem 0 0;
 }
+
+.error-msg{
+  font-size: 50px;
+  text-align: center;
+  align-self: center;
+}
