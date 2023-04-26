@@ -35,6 +35,7 @@ const fetchMovie = function (movieSearchQueryName) {
         return response.json();
       })
       .then((movie) => {
+        console.log(movie);
         displayMovie(movie);
       })
       .catch((error) => {
@@ -47,15 +48,15 @@ const fetchMovie = function (movieSearchQueryName) {
 function displayMovie(movie) {
   moviePoster.src = movie.Poster;
   movieTitle.innerText = movie.Title;
-  movieYear.innerText = movie.Year;
-  movieRate.innerText = movie.Rated;
-  movieReleaseDate.innerText = movie.Released;
-  movieGenre.innerText = movie.Genre;
-  movieWriter.innerText = movie.Writer;
-  movieActors.innerText = movie.Actors;
-  moviePlot.innerText = movie.Plot;
-  movieLanguage.innerText = movie.Language;
-  movieAwards.innerText = movie.Awards;
+  movieYear.innerText = `Year: ${movie.Year}`;
+  movieRate.innerText = `Ratings: ${movie.Rated}`;
+  movieReleaseDate.innerText = `Released: ${movie.Released}`;
+  movieGenre.innerText = `Genre: ${movie.Genre}`;
+  movieWriter.innerText = `Writers: ${movie.Writer}`;
+  movieActors.innerText = `Actors: ${movie.Actors}`;
+  moviePlot.textContent = `Plot: ${movie.Plot}`;
+  movieLanguage.innerText = `Language: ${movie.Language}`;
+  movieAwards.innerHTML = `<i class="fas fa-award"></i>${movie.Awards}`;
 }
 
 form.addEventListener("submit", function (e) {
