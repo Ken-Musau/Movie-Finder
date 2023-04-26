@@ -3,6 +3,8 @@
 const resultContainer = document.getElementById("search-content-container");
 const form = document.querySelector("#search-box");
 const searchBtn = document.getElementById("search-btn");
+const commentForm = document.getElementById("comment");
+const userReviewList = document.getElementById("user-review-list");
 
 const moviePoster = document.getElementById("movie-poster");
 const movieTitle = document.getElementById("movie-title");
@@ -19,30 +21,25 @@ const movieAwards = document.getElementById("awards");
 // const movieSearchQueryName = "avatar";
 
 const fetchMovie = function (movieSearchQueryName) {
-  if (movieSearchQueryName.length === 0) {
-    resultContainer.innerHTML =
-      '<h3 class="error-msg">Please enter the correct Movie Name</h3>';
-  } else {
-    fetch(
-      `http://www.omdbapi.com/?t=${encodeURIComponent(
-        movieSearchQueryName
-      )}&apikey=${key}`
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch movie data");
-        }
-        return response.json();
-      })
-      .then((movie) => {
-        console.log(movie);
-        displayMovie(movie);
-      })
-      .catch((error) => {
-        resultContainer.innerHTML =
-          '<h3 class="error-msg">Failed to fetch movie data. Please try again later.</h3>';
-      });
-  }
+  fetch(
+    `http://www.omdbapi.com/?t=${encodeURIComponent(
+      movieSearchQueryName
+    )}&apikey=${key}`
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch movie data");
+      }
+      return response.json();
+    })
+    .then((movie) => {
+      console.log(movie);
+      displayMovie(movie);
+    })
+    .catch((error) => {
+      resultContainer.innerHTML =
+        '<h3 class="error-msg">Failed to fetch movie data. Please try again later.</h3>';
+    });
 };
 
 function displayMovie(movie) {
@@ -67,6 +64,17 @@ form.addEventListener("submit", function (e) {
       '<h3 class="error-msg">Enter any Movie Title to search</h3>';
   } else {
     fetchMovie(movieSearchQueryName);
-    //   form.reset();
+    form.reset();
   }
 });
+
+commentForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  appendContentToParent(e.target.comments.value);
+});
+
+function appendContentToParent(submitValue) {
+  const li = document.createElement("li");
+  li.innerText = submitValue;
+  userReviewList.appendChild(li);
+}

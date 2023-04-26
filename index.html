@@ -16,7 +16,7 @@
   </head>
   <body>
     <main class="wrapper">
-      <header class="header-container">
+      <nav class="header-container">
         <!-- logo container start -->
         <div class="logo-container">
           <div class="logo">
@@ -41,7 +41,7 @@
             <button id="search-btn">Search</button>
           </form>
         </div>
-      </header>
+      </nav>
       
       <!-- search content box start -->
       <div class="search-content-container" id="search-content-container">
@@ -49,21 +49,7 @@
         <!-- search result container -->
         <div class="search-result-container" id="search-result-container">
 
-          <!-- <div class="top-2023-movies container">
-            <ul class="top-2023">
-              <li>Ant-Man and the Wasp Quantumania </li>
-              <li>	Avatar The Way of Water</li>
-              <li>	Ghosted </li>
-              <li>Scream VI</li>
-              <li>	65</li>
-              <li>	John Wick Chapter 4</li>
-              <li>Cocaine Bear </li>
-              <li>	Creed III </li>
-              <li>	Tetris </li>
-              <li>	Operation Fortune Ruse de guerre</li>
-            </ul>
-          </div> -->
-       
+  
             <!-- poster container -->
             <div class="movie-poster">
               <img src="./assets/spiderman.jpg" alt="movie poster" id="movie-poster"/>
@@ -72,6 +58,13 @@
             <!-- movie infomation container -->
             <div class="movie-info">
               <h3 class="movie-title" id="movie-title">Spider-Man: No Way Home</h3>
+              <p class="star-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </p>
               <ul class="movie-extra-info">
                 <li class="year" id="year">Year: 2021</li>
                 <li class="rated" id="rated">Ratings: PG-13</li>
@@ -86,8 +79,36 @@
             </div>
     
         </div>
+        <div class="more-to-explore">
+          <h3>Top Picks for 2023</h3>
+          <div class="movie-one">
+
+          </div>
+        </div>
+        <!-- user review -->
+        <div class="user-review">
+          <h3>User Reviews <span>></span> </h3>
+          <ul id="user-review-list">
+            <li>Don't watch the trailers. Just watch the movie. I'm not going to say much. It's amazing. And I'm in complete disbelief that it actually happened. Well-made, well-acted, well-directed</li>
+          </ul>
+        </div>
       </div>
     </main>
+    
+
+    <!-- review section -->
+    <section class="comment-section-container">
+     
+
+          <div class="comments">
+            <form action="#" id="comment">
+              <textarea name="" id="comments" cols="50" rows="5" placeholder="Type your review here..."></textarea>
+              <button type="submit" class="comment-btn">Submit Review</button>
+            </form>
+          </div>
+      
+    
+    </section>
     <script src="keys.js"></script>
     <script src="index.js"></script>
   </body>
