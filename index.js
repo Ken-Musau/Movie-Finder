@@ -5,7 +5,6 @@ const form = document.querySelector("#search-box");
 const searchBtn = document.getElementById("search-btn");
 const commentForm = document.getElementById("comment");
 const userReviewList = document.getElementById("user-review-list");
-const star = document.querySelectorAll(".fa-star");
 const topPickslist = document.getElementById("2023-list");
 const recentSearch = document.getElementById("recent-search");
 const watchList = document.getElementById("watch-list");
@@ -24,6 +23,7 @@ const movieAwards = document.getElementById("awards");
 
 // const recentSearchList = [];
 
+
 const fetchMovie = function (movieSearchQueryName) {
   fetch(
     `http://www.omdbapi.com/?t=${encodeURIComponent(
@@ -37,6 +37,7 @@ const fetchMovie = function (movieSearchQueryName) {
       return response.json();
     })
     .then((movie) => {
+      console.log(movie);
       displayMovie(movie);
       // recentSearchUpdate(movie);
     })
@@ -86,11 +87,7 @@ commentForm.addEventListener("submit", function (e) {
   appendContentToParent(e.target.comments.value);
 });
 
-star.forEach((star) =>
-  star.addEventListener("click", function () {
-    star.style.color = "gold";
-  })
-);
+
 
 topPickslist.addEventListener("click", function (e) {
   const movieTitle = e.target.innerText;
