@@ -4,7 +4,11 @@ Movie Finder is a web application that allows users to search for movies by titl
 
 # Author
 
-Movie FInder has been created by Kennedy Mutunga Musau
+## Movie FInder has been created by Kennedy Mutunga Musau
+
+Here is the link to the live site
+
+https://ken-musau.github.io/Movie-Finder/
 
 # Features
 
