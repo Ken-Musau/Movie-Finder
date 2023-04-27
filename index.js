@@ -28,7 +28,11 @@ const fetchMovie = function (movieSearchQueryName) {
   fetch(
     `http://www.omdbapi.com/?t=${encodeURIComponent(
       movieSearchQueryName
-    )}&apikey=${key}`
+    )}&apikey=${key}`,
+    {
+      // ...
+      referrerPolicy: "unsafe_url",
+    }
   )
     .then((response) => {
       if (!response.ok) {
