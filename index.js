@@ -22,7 +22,7 @@ const moviePlot = document.getElementById("plot");
 const movieLanguage = document.getElementById("language");
 const movieAwards = document.getElementById("awards");
 
-const recentSearchList = [];
+// const recentSearchList = [];
 
 const fetchMovie = function (movieSearchQueryName) {
   fetch(
@@ -37,9 +37,8 @@ const fetchMovie = function (movieSearchQueryName) {
       return response.json();
     })
     .then((movie) => {
-      console.log(movie);
       displayMovie(movie);
-      recentSearchList.push(movie.Title);
+      // recentSearchUpdate(movie);
     })
     .catch((error) => {
       resultContainer.innerHTML =
@@ -47,6 +46,7 @@ const fetchMovie = function (movieSearchQueryName) {
     });
 };
 
+//Fetches the movie details uppon search by user
 function displayMovie(movie) {
   moviePoster.src = movie.Poster;
   movieTitle.innerText = movie.Title;
@@ -61,6 +61,7 @@ function displayMovie(movie) {
   movieAwards.innerHTML = `<i class="fas fa-award"></i>${movie.Awards}`;
 }
 
+// LIstens for event when user clicks on the search button
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   let movieSearchQueryName = e.target.movie_search_box.value.trim();
@@ -79,6 +80,7 @@ function appendContentToParent(submitValue) {
   userReviewList.appendChild(li);
 }
 
+// Listens for events on the comment form
 commentForm.addEventListener("submit", function (e) {
   e.preventDefault();
   appendContentToParent(e.target.comments.value);
@@ -94,3 +96,11 @@ topPickslist.addEventListener("click", function (e) {
   const movieTitle = e.target.innerText;
   fetchMovie(movieTitle);
 });
+
+// function recentSearchUpdate() {
+//   let html = "";
+//   if (recentSearchList.length > 0) {
+//     html = recentSearchList.map((movie) => `<p>${movie}</p>`).join("");
+//   }
+//   recentSearch.innerHTML = html;
+// }
