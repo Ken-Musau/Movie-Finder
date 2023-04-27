@@ -23,7 +23,6 @@ const movieAwards = document.getElementById("awards");
 
 // const recentSearchList = [];
 
-
 const fetchMovie = function (movieSearchQueryName) {
   fetch(
     `http://www.omdbapi.com/?t=${encodeURIComponent(
@@ -37,7 +36,10 @@ const fetchMovie = function (movieSearchQueryName) {
       return response.json();
     })
     .then((movie) => {
-      console.log(movie);
+      if (movie.Error) {
+        resultContainer.innerHTML =
+          '<h3 class="error-msg">The Movie you are searching for is not available.</h3>';
+      }
       displayMovie(movie);
       // recentSearchUpdate(movie);
     })
@@ -86,8 +88,6 @@ commentForm.addEventListener("submit", function (e) {
   e.preventDefault();
   appendContentToParent(e.target.comments.value);
 });
-
-
 
 topPickslist.addEventListener("click", function (e) {
   const movieTitle = e.target.innerText;
