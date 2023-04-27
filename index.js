@@ -8,6 +8,7 @@ const userReviewList = document.getElementById("user-review-list");
 const star = document.querySelectorAll(".fa-star");
 const topPickslist = document.getElementById("2023-list");
 const recentSearch = document.getElementById("recent-search");
+const watchList = document.getElementById("watch-list");
 
 const moviePoster = document.getElementById("movie-poster");
 const movieTitle = document.getElementById("movie-title");
@@ -20,8 +21,6 @@ const movieActors = document.getElementById("actors");
 const moviePlot = document.getElementById("plot");
 const movieLanguage = document.getElementById("language");
 const movieAwards = document.getElementById("awards");
-
-// const movieSearchQueryName = "avatar";
 
 const recentSearchList = [];
 
